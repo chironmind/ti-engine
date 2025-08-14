@@ -14,6 +14,7 @@ ti-engine is a WebAssembly-powered, JS/TS-idiomatic wrapper around RustTI — a 
 - Identical results to RustTI (with parity tests for core functions)
 
 Looking for the Rust crate? See: [ChironMind/RustTI](https://github.com/ChironMind/RustTI)
+
 Looking for the Python version? See: [ChironMind/PyTechnicalIndicators](https://github.com/chironmind/PyTechnicalIndicators)
 
 ---
