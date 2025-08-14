@@ -1,0 +1,106 @@
+import { test, describe, before } from "node:test";
+import assert from "node:assert/strict";
+
+import init, { chartTrends } from "../index.node.js";
+
+before(async () => {
+  await init();
+});
+
+describe("chartTrends (parity with Rust tests)", () => {
+  test("peaks_single_peak", () => {
+    const highs = [101.26, 102.57, 102.32, 100.69];
+    const out = chartTrends.peaks(highs, 4, 1);
+    assert.deepEqual(out, [[102.57, 1]]);
+  });
+
+  test("peaks_multiple_peaks", () => {
+    const highs = [101.26, 102.57, 102.32, 100.69, 100.83, 101.73, 102.01];
+    const out = chartTrends.peaks(highs, 4, 1);
+    assert.deepEqual(out, [
+      [102.57, 1],
+      [102.01, 6],
+    ]);
+  });
+
+  test("peaks_multiple_peaks_same_period", () => {
+    const highs = [101.26, 102.57, 102.57, 100.69, 100.83, 101.73, 102.01];
+    const out = chartTrends.peaks(highs, 4, 1);
+    assert.deepEqual(out, [
+      [102.57, 2],
+      [102.01, 6],
+    ]);
+  });
+
+  test("valleys_single_valley", () => {
+    const lows = [100.08, 98.75, 100.14, 98.98, 99.07, 100.1, 99.96];
+    const out = chartTrends.valleys(lows, 7, 1);
+    assert.deepEqual(out, [[98.75, 1]]);
+  });
+
+  test("valleys_multiple_valleys", () => {
+    const lows = [100.08, 98.75, 100.14, 98.98, 99.07, 100.1, 99.96];
+    const out = chartTrends.valleys(lows, 4, 1);
+    assert.deepEqual(out, [
+      [98.75, 1],
+      [98.98, 3],
+    ]);
+  });
+
+  test("valleys_multiple_valleys_same_period", () => {
+    const lows = [98.75, 98.75, 100.14, 98.98, 99.07, 100.1, 99.96];
+    const out = chartTrends.valleys(lows, 4, 1);
+    assert.deepEqual(out, [
+      [98.75, 1],
+      [98.98, 3],
+    ]);
+  });
+
+  test("peak_trend", () => {
+    const highs = [101.26, 102.57, 102.32, 100.69, 100.83, 101.73, 102.01];
+    const out = chartTrends.peakTrend(highs, 4);
+    assert.deepEqual(out, [-0.11199999999999762, 102.68199999999999]);
+  });
+
+  test("valley_trend", () => {
+    const lows = [100.08, 98.75, 100.14, 98.98, 99.07, 100.1, 99.96];
+    const out = chartTrends.valleyTrend(lows, 4);
+    assert.deepEqual(out, [0.11500000000000199, 98.635]);
+  });
+
+  test("overall_trend", () => {
+    const prices = [100.2, 100.46, 100.53, 100.38, 100.19];
+    const out = chartTrends.overallTrend(prices);
+    assert.deepEqual(out, [-0.010000000000000852, 100.372]);
+  });
+
+  test("break_down_trends_std_dev", () => {
+    const prices = [100.2, 100.46, 100.53, 100.38, 100.19];
+    const out = chartTrends.breakDownTrends(
+      prices,
+      1,    // max_outliers
+      0.75, // soft r2 min
+      1.0,  // soft r2 max
+      0.5,  // hard r2 min
+      1.5,  // hard r2 max
+      2.0,  // soft SE mult
+      3.0,  // hard SE mult
+      2.0,  // soft chi2 mult
+      3.0   // hard chi2 mult
+    );
+    assert.deepEqual(out, [
+      [0, 2, 0.16499999999999915, 100.23166666666665],
+      [2, 4, -0.1700000000000017, 100.87666666666668],
+    ]);
+  });
+
+  // Optional: panic parity checks (commented out by default as they throw)
+  // test("peaks_panic (period > len)", () => {
+  //   const highs = [101.26, 102.57, 102.57, 100.69, 100.83, 101.73, 102.01];
+  //   assert.throws(() => chartTrends.peaks(highs, 40, 1));
+  // });
+  // test("valleys_panic (period > len)", () => {
+  //   const lows = [98.75, 98.75, 100.14, 98.98, 99.07, 100.1, 99.96];
+  //   assert.throws(() => chartTrends.valleys(lows, 40, 1));
+  // });
+});

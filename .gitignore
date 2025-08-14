@@ -1,0 +1,10 @@
+# Rust
+/target
+
+# wasm-pack outputs
+/pkg
+/dist
+
+# Node
+/node_modules
+.npmrc

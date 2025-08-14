@@ -1,0 +1,45 @@
+{
+  "name": "ti-engine",
+  "version": "0.1.0",
+  "description": "WASM bindings for RustTI technical indicators for Node and browser",
+  "author": "ChironMind",
+  "license": "MIT",
+  "type": "module",
+  "private": false,
+  "files": [
+    "dist/",
+    "index.js",
+    "index.web.js",
+    "index.node.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "build:web": "wasm-pack build --release --target web --out-dir dist/web",
+    "build:node": "wasm-pack build --release --target nodejs --out-dir dist/node",
+    "build:bundler": "wasm-pack build --release --target bundler --out-dir dist/bundler",
+    "build": "npm run build:web && npm run build:node && npm run build:bundler",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && node --test"
+  },
+  "keywords": [
+    "rust",
+    "wasm",
+    "technical-indicators",
+    "trading",
+    "quant"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChironMind/ti-engine"
+  },
+  "exports": {
+    ".": {
+      "browser": "./index.web.js",
+      "node": "./index.node.js",
+      "default": "./index.js"
+    }
+  },
+  "types": "./index.d.ts",
+  "sideEffects": false
+}
