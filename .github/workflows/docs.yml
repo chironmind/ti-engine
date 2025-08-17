@@ -1,4 +1,4 @@
-oname: Build & Deploy TypeDoc Docs to GitHub Pages
+name: Build & Deploy TypeDoc Docs to GitHub Pages
 
 on:
   push:
