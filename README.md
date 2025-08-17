@@ -2,6 +2,7 @@
 [![WASM](https://img.shields.io/badge/Target-WASM-6556C0?logo=webassembly&logoColor=white)](#)
 [![Node](https://img.shields.io/badge/Node-%3E%3D18-339933?logo=node.js&logoColor=white)](#)
 [![TypeScript](https://img.shields.io/badge/Types-Included-3178C6?logo=typescript&logoColor=white)](#)
+[![Docs](https://img.shields.io/badge/docs-TypeDoc-blue?logo=githubpages)](https://chironmind.github.io/ti-engine/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 # 🦀 ti-engine

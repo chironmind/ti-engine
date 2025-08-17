@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [18, 20]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: wasm32-unknown-unknown
+          override: true
+
+      - name: Install wasm-pack
+        run: cargo install wasm-pack
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build (Node)
+        run: wasm-pack build --release --target nodejs    --out-dir dist/node     --out-name ti_engine
+
+      - name: Build (Bundler)
+        run: wasm-pack build --release --target bundler   --out-dir dist/bundler  --out-name ti_engine
+
+      - name: Build (Web)
+        run: wasm-pack build --release --target web       --out-dir dist/web      --out-name ti_engine
+
+      - name: Run tests (Node)
+        run: node --test ti-engine/test/*.test.js

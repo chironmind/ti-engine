@@ -35,11 +35,15 @@
   },
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "browser": "./index.web.js",
-      "node": "./index.node.js",
-      "default": "./index.js"
+      "require": "./index.node.js",
+      "import": "./index.js"
     }
   },
   "types": "./index.d.ts",
-  "sideEffects": false
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  }
 }
