@@ -41,4 +41,4 @@ jobs:
         run: wasm-pack build --release --target web       --out-dir dist/web      --out-name ti_engine
 
       - name: Run tests (Node)
-        run: node --test ti-engine/test/*.test.js
+        run: npm test
