@@ -1800,17 +1800,6 @@ export interface VolatilityIndicatorsBulk {
 }
 
 /**
- * Moving average type used by the movingAverage APIs.
- * Supported:
- * - Simple
- * - Smoothed
- * - Exponential
- *
- * Note: The Rust Personalised variant is not exposed in this JS API.
- */
-export { MovingAverageType } from "./dist/bundler/ti_engine";
-
-/**
  * Single-value moving average utilities.
  */
 export interface MovingAverageSingle {
