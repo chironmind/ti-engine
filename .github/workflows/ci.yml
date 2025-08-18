@@ -28,9 +28,6 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-            #      - name: Install deps
-            #        run: npm ci
-
       - name: Build (Node)
         run: wasm-pack build --release --target nodejs    --out-dir dist/node     --out-name ti_engine
 

@@ -22,8 +22,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: Build project
-        run: npm run build
+      - name: Install wasm-pack
+        run: cargo install wasm-pack
+
+      - name: Build (Node)
+        run: wasm-pack build --release --target nodejs    --out-dir dist/node     --out-name ti_engine
 
       - name: Install TypeDoc
         run: npm install --save-dev typedoc
