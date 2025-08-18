@@ -1,3 +1,5 @@
+import { ConstantModelType, DeviationModel, Position, MovingAverageType } from "./dist/bundler/ti_engine";
+
 // Re-export enums from the generated wasm types so consumers get both types and JSDoc.
 /**
  * The moving constant model to use for indicators that accept a "constant".
