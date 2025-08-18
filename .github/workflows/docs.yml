@@ -25,8 +25,8 @@ jobs:
       - name: Install wasm-pack
         run: cargo install wasm-pack
 
-      - name: Build (Node)
-        run: wasm-pack build --release --target nodejs    --out-dir dist/node     --out-name ti_engine
+      - name: Build 
+        run: wasm-pack build --release --target bundler   --out-dir dist/bundler  --out-name ti_engine
 
       - name: Install TypeDoc
         run: npm install --save-dev typedoc
