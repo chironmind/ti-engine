@@ -8,7 +8,7 @@ module.exports = {
     {
       type: 'category',
       label: 'How-To Guides',
-      id: 'howto/index',
+  //    id: 'howto/index',
       items: [
         'howto/index',
         'howto/bulk-vs-single',
@@ -21,7 +21,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Tutorials',
-      id: 'tutorials/index',
+//      id: 'tutorials/index',
       items: [
 	'tutorials/getting-started',
         'tutorials/plotting',
