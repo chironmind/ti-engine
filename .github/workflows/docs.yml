@@ -42,7 +42,7 @@ jobs:
 
       - name: Build Docusaurus site
         working-directory: docs
-        run: npm docusaurus build
+        run: npx docusaurus build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
