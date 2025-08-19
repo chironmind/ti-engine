@@ -363,6 +363,6 @@ Rolling indicators start later; we aligned to the right using x slices:
 
 ## ✅ Next step
 
-[Advanced use cases to ti-engine](advance.md)
+[Advanced use cases to ti-engine](advanced.md)
 
 Happy charting! 📈🦀
