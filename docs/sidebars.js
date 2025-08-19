@@ -13,7 +13,7 @@ module.exports = {
         'howto/index',
         'howto/bulk-vs-single',
         'howto/choose-constant-model',
-        'howto/choose-deviation',
+        'howto/choose-deviation-model',
         'howto/choose-period',
         'howto/mcginley-dynamic',
       ],
