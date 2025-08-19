@@ -5,7 +5,7 @@
 [![Docs](https://img.shields.io/badge/docs-TypeDoc-blue?logo=githubpages)](https://chironmind.github.io/ti-engine/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
-# 🦀 ti-engine
+# ti-engine
 
 ti-engine is a WebAssembly-powered, JS/TS-idiomatic wrapper around RustTI — a high‑performance, pure‑Rust technical indicators library.
 
