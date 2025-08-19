@@ -224,16 +224,6 @@ console.log("Latest ATR:", atrSeries[atrSeries.length - 1]);
 
 ---
 
-## 🧾 Common pitfalls
-
-| Problem | Why it happens | How to fix |
-|--------|-----------------|------------|
-| Mismatched array lengths | OHLC inputs not aligned | Ensure close/high/low arrays are same length and sorted |
-| Empty window errors | Period > data length | Pick N <= array length |
-| Off-by-one alignment | Misunderstanding anchor | Remember: bulk[i] aligns to the right edge of the window, at input index i+N-1 |
-
----
-
 ## ✅ Next step
 
 - [Plot your indicators](plotting.md)
