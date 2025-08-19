@@ -9,6 +9,7 @@ on:
       - "src/**"
       - "package.json"
       - ".github/workflows/docs.yml"
+      - "docs/**"
 
 permissions:
   contents: write
