@@ -35,11 +35,19 @@ jobs:
         run: npm install --save-dev typedoc
 
       - name: Generate docs
-        run: npx typedoc index.d.ts --out docs/api
+        run: npx typedoc index.d.ts --out docs/static/api
+
+      - name: Set up Docusaurus
+        working-directory: docs
+        run: npx create-docusaurus@latest docs classic
+
+      - name: Build Docusaurus site
+        working-directory: docs
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs
+          publish_dir: docsi/build
           publish_branch: gh-pages
