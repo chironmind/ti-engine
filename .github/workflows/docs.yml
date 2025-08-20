@@ -37,10 +37,7 @@ jobs:
         run: npm install
 
       - name: List repo contents
-        run: ls -l ../../
-        working-directory: docs
-      - name: List docs contents
-        run: ls -l .
+        run: ls -l ../
         working-directory: docs
 
       - name: Generate docs
