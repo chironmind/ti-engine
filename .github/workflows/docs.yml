@@ -32,18 +32,16 @@ jobs:
       - name: Build 
         run: wasm-pack build --release --target bundler   --out-dir dist/bundler  --out-name ti_engine
 
-      - name: Install TypeDoc
-        run: npm install --save-dev typedoc
+      - name: Install docs dependencies
+        working-directory: docs
+        run: npm ci
 
       - name: Generate docs
-        run: npx typedoc index.d.ts --out docs/static/api
-
-      - name: Install Docusaurus
-        run: npm install @docusaurus/core @docusaurus/preset-classic
+        run: npm run api
 
       - name: Build Docusaurus site
         working-directory: docs
-        run: npx docusaurus build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
