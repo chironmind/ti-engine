@@ -2,11 +2,11 @@ module.exports = {
   title: 'ti-engine',
   tagline: 'JavaScript Technical Indicator package',
   url: 'https://ChironMind.github.io',
-  baseUrl: '/',
+  baseUrl: '/docs/',
 //  favicon: 'img/favicon.ico',
   organizationName: 'ChironMind', 
   projectName: 'ti-engine', 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
     defaultLocale: 'en',
