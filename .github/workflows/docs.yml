@@ -36,13 +36,8 @@ jobs:
         working-directory: docs
         run: npm install
 
-      - name: List repo contents
-        run: ls -l ../
-        working-directory: docs
-
       - name: Generate docs
-        working-directory: docs
-        run: npm run api
+        run: npx typedoc index.d.ts --out docs/static/api
 
       - name: Build Docusaurus site
         working-directory: docs
