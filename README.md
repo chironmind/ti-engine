@@ -260,7 +260,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## 📰 Release Notes
 
-See Git history and [changelog](CHANGELOG,md) for details.
+See Git history and [changelog](CHANGELOG.md) for details.
 We follow semver where possible for API changes.
 
 ---
