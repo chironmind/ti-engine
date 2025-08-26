@@ -23,7 +23,7 @@ module.exports = {
       label: 'How-To Guides',
   //    id: 'howto/index',
       items: [
-	      {'howto/index', label: 'Introduction'},
+	'howto/index',
         'howto/bulk-vs-single',
         'howto/choose-constant-model',
         'howto/choose-deviation-model',
