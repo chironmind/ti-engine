@@ -31,9 +31,9 @@ module.exports = {
     //    src: 'img/logo.svg',
       //},
       items: [
-        {label: 'Tutorial', to: '/docs/tutorials/getting-started', position: 'left'},
-        {label: 'How-To', to: '/docs/howto/getting-started', position: 'left'},
-        {label: 'API', to: '/docs/api/index.html', position: 'left'},
+        {label: 'Tutorials', to: '/docs/tutorials/index', position: 'left'},
+        {label: 'How-To', to: '/docs/howto/index', position: 'left'},
+        {label: 'API', to: '/api/index.html', position: 'left'},
 	{
           href: 'https://github.com/chironmind/ti-engine',
           label: 'GitHub',
@@ -47,9 +47,9 @@ module.exports = {
         {
           title: 'Docs',
           items: [
-            {label: 'Tutorial', to: '/docs/tutorials/getting-started'},
-            {label: 'How-To', to: '/docs/howto/getting-started'},
-            {label: 'API', to: '/docs/api/index.html'},
+            {label: 'Tutorials', to: '/docs/tutorials/index'},
+            {label: 'How-To', to: '/docs/howto/index'},
+            {label: 'API', to: '/api/index.html'},
           ],
         },
         {
