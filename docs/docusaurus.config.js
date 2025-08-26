@@ -31,8 +31,8 @@ module.exports = {
     //    src: 'img/logo.svg',
       //},
       items: [
-        {label: 'Tutorial', to: '/docs/tutorials/getting-started'position: 'left'},
-        {label: 'How-To', to: '/docs/howto/getting-started'position: 'left'},
+        {label: 'Tutorial', to: '/docs/tutorials/getting-started', position: 'left'},
+        {label: 'How-To', to: '/docs/howto/getting-started', position: 'left'},
         {label: 'API', to: '/docs/api/index.html', position: 'left'},
 	{
           href: 'https://github.com/chironmind/ti-engine',
