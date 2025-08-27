@@ -29,7 +29,7 @@ jobs:
         run: cargo install wasm-pack
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build WASM targets
         run: npm run build
