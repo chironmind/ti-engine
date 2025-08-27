@@ -33,7 +33,7 @@ module.exports = {
       items: [
         {label: 'Tutorials', to: '/docs/tutorials', position: 'left'},
         {label: 'How-To', to: '/docs/howto', position: 'left'},
-        {label: 'API', href: 'api/', position: 'left'},
+        {label: 'API', href: '/api/index.html', position: 'left'},
 	{
           href: 'https://github.com/chironmind/ti-engine',
           label: 'GitHub',
