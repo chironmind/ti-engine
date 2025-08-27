@@ -34,7 +34,7 @@ module.exports = {
       items: [
         {label: 'Tutorials', to: '/tutorials', position: 'left'},
         {label: 'How-To', to: '/howto', position: 'left'},
-        {label: 'API', href: '/api/index.html', position: 'left'},
+        {label: 'API', href: 'api/', position: 'left'},
 	{
           href: 'https://github.com/chironmind/ti-engine',
           label: 'GitHub',
@@ -50,7 +50,7 @@ module.exports = {
           items: [
             {label: 'Tutorials', to: '/tutorials'},
             {label: 'How-To', to: '/howto'},
-            {label: 'API', href: '/api/index.html'},
+            {label: 'API', href: 'api/'},
           ],
         },
         {

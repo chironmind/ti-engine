@@ -34,7 +34,7 @@ module.exports = {
     {
       type: 'link',
       label: 'API Reference',
-      href: '/api/index.html',
+      href: 'api/',
     },
   ],
 };
