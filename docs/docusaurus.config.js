@@ -19,6 +19,7 @@ module.exports = {
         docs: {
           path: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
+		routeBasePath: '/',
         },
       },
     ],
@@ -31,8 +32,8 @@ module.exports = {
     //    src: 'img/logo.svg',
       //},
       items: [
-        {label: 'Tutorials', to: '/docs/tutorials', position: 'left'},
-        {label: 'How-To', to: '/docs/howto', position: 'left'},
+        {label: 'Tutorials', to: '/tutorials', position: 'left'},
+        {label: 'How-To', to: '/howto', position: 'left'},
         {label: 'API', href: '/api/index.html', position: 'left'},
 	{
           href: 'https://github.com/chironmind/ti-engine',
@@ -47,8 +48,8 @@ module.exports = {
         {
           title: 'Docs',
           items: [
-            {label: 'Tutorials', to: '/docs/tutorials'},
-            {label: 'How-To', to: '/docs/howto'},
+            {label: 'Tutorials', to: '/tutorials'},
+            {label: 'How-To', to: '/howto'},
             {label: 'API', href: '/api/index.html'},
           ],
         },
