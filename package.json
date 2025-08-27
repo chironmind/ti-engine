@@ -5,6 +5,7 @@
   "author": "ChironMind",
   "license": "MIT",
   "type": "module",
+  "homepage": "https://chironmind.github.io/ti-engine/",
   "private": false,
   "files": [
     "dist/",
