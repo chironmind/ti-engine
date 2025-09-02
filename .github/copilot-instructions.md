@@ -54,9 +54,7 @@ wasm-pack build --release --target bundler --out-dir dist/bundler --out-name ti_
 **IMPORTANT:** The `--out-name ti_engine` flag is required for consistent file naming expected by JavaScript entry points.
 
 **Known Issue - wasm-opt Download Failure:**
-In CI environments or restricted networks, wasm-opt may fail to download from GitHub. If you encounter:
-```
-Error: failed to download from https://github.com/WebAssembly/binaryen/releases/download/version_117/binaryen-version_117-x86_64-linux.tar.gz
+Error: failed to download from https://github.com/WebAssembly/binaryen/releases/download/version_XXX/binaryen-version_XXX-x86_64-linux.tar.gz
 ```
 
 **Workaround:** Temporarily disable wasm-opt in `Cargo.toml`:
@@ -105,7 +103,7 @@ cargo clippy     # Rust linting (expect some warnings about too many arguments)
 
 ### JavaScript/TypeScript
 - **Prettier** mentioned in CONTRIBUTING.md but not installed by default
-- **ESLint** mentioned but not configured in repository
+- **ESLint** mentioned but not configured in the repository
 - Manual formatting may be needed for JS/TS files
 
 ## Architecture and Project Layout
