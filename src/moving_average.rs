@@ -15,7 +15,11 @@ pub fn ma_single_mcginley_dynamic(
     previous_mcginley_dynamic: f64,
     period: usize,
 ) -> f64 {
-    rust_ti::moving_average::single::mcginley_dynamic(latest_price, previous_mcginley_dynamic, period)
+    rust_ti::moving_average::single::mcginley_dynamic(
+        latest_price,
+        previous_mcginley_dynamic,
+        period,
+    )
 }
 
 // -------- BULK --------
