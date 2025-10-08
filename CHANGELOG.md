@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
-## [1.1.0] - TBD
+## [1.1.0] - 2025-10-08 
 
 ### Added
 
@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Fixed node version in README, and package.json
+- Updated rust_ti version 2.1.5
 
 ### Fixed
 
