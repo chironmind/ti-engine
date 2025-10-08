@@ -1,8 +1,12 @@
+[![npm version](https://img.shields.io/npm/v/ti-engine?color=cb3837&logo=npm)](https://www.npmjs.com/package/ti-engine)
+[![npm downloads](https://img.shields.io/npm/dm/ti-engine?logo=npm)](https://www.npmjs.com/package/ti-engine)
+[![Bundle size](https://img.shields.io/bundlephobia/minzip/ti-engine?label=min+zip&logo=webpack)](https://bundlephobia.com/package/ti-engine)
+[![Node](https://img.shields.io/badge/Node-%3E%3D20-339933?logo=node.js&logoColor=white)](#)
 
 [![WASM](https://img.shields.io/badge/Target-WASM-6556C0?logo=webassembly&logoColor=white)](#)
-[![Node](https://img.shields.io/badge/Node-%3E%3D18-339933?logo=node.js&logoColor=white)](#)
 [![TypeScript](https://img.shields.io/badge/Types-Included-3178C6?logo=typescript&logoColor=white)](#)
 [![Docs](https://img.shields.io/badge/docs-TypeDoc-blue?logo=githubpages)](https://chironmind.github.io/ti-engine/)
+[![CI](https://github.com/chironmind/ti-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/chironmind/ti-engine/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 # ti-engine
