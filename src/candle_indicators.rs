@@ -1,5 +1,5 @@
-use wasm_bindgen::prelude::*;
 use js_sys::Array;
+use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsValue;
 
 // ------------- SINGLE -------------
@@ -288,11 +288,7 @@ pub fn candle_bulk_ichimoku_cloud(
 }
 
 #[wasm_bindgen(js_name = candle_bulk_donchianChannels)]
-pub fn candle_bulk_donchian_channels(
-    highs: Vec<f64>,
-    lows: Vec<f64>,
-    period: usize,
-) -> Array {
+pub fn candle_bulk_donchian_channels(highs: Vec<f64>, lows: Vec<f64>, period: usize) -> Array {
     let data = rust_ti::candle_indicators::bulk::donchian_channels(&highs, &lows, period);
     let outer = Array::new();
     for (l, m, u) in data {

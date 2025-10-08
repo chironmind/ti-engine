@@ -481,29 +481,30 @@ export interface ChartTrends {
 
   /**
    * Segment the series into distinct trend ranges based on goodness-of-fit thresholds.
+   * Uses rust_ti 2.1.5 TrendBreakConfig parameters.
    * @param prices Prices series.
-   * @param maxOutliers Allowed consecutive soft/hard breaks before splitting.
-   * @param softRSquaredMinimum Soft minimum R^2 threshold.
-   * @param softRSquaredMaximum Soft maximum R^2 threshold.
-   * @param hardRSquaredMinimum Hard minimum R^2 threshold.
-   * @param hardRSquaredMaximum Hard maximum R^2 threshold.
-   * @param softStandardErrorMultiplier Soft multiplier for standard error increases.
-   * @param hardStandardErrorMultiplier Hard multiplier for standard error increases.
-   * @param softReducedChiSquaredMultiplier Soft multiplier for reduced chi-squared.
-   * @param hardReducedChiSquaredMultiplier Hard multiplier for reduced chi-squared.
+   * @param maxOutliers Maximum number of outliers allowed before trend break.
+   * @param softAdjRSquaredMinimum Soft minimum adjusted R-squared threshold.
+   * @param hardAdjRSquaredMinimum Hard minimum adjusted R-squared threshold.
+   * @param softRmseMultiplier Soft RMSE multiplier for trend breaks.
+   * @param hardRmseMultiplier Hard RMSE multiplier for trend breaks.
+   * @param softDurbinWatsonMin Soft minimum Durbin-Watson statistic.
+   * @param softDurbinWatsonMax Soft maximum Durbin-Watson statistic.
+   * @param hardDurbinWatsonMin Hard minimum Durbin-Watson statistic.
+   * @param hardDurbinWatsonMax Hard maximum Durbin-Watson statistic.
    * @returns Array of [startIndex, endIndex, slope, intercept].
    */
   breakDownTrends(
     prices: number[],
     maxOutliers: number,
-    softRSquaredMinimum: number,
-    softRSquaredMaximum: number,
-    hardRSquaredMinimum: number,
-    hardRSquaredMaximum: number,
-    softStandardErrorMultiplier: number,
-    hardStandardErrorMultiplier: number,
-    softReducedChiSquaredMultiplier: number,
-    hardReducedChiSquaredMultiplier: number
+    softAdjRSquaredMinimum: number,
+    hardAdjRSquaredMinimum: number,
+    softRmseMultiplier: number,
+    hardRmseMultiplier: number,
+    softDurbinWatsonMin: number,
+    softDurbinWatsonMax: number,
+    hardDurbinWatsonMin: number,
+    hardDurbinWatsonMax: number
   ): [number, number, number, number][];
 }
 
