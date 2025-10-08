@@ -14,9 +14,15 @@ pub enum ConstantModelType {
 impl From<ConstantModelType> for rust_ti::ConstantModelType {
     fn from(v: ConstantModelType) -> Self {
         match v {
-            ConstantModelType::SimpleMovingAverage => rust_ti::ConstantModelType::SimpleMovingAverage,
-            ConstantModelType::SmoothedMovingAverage => rust_ti::ConstantModelType::SmoothedMovingAverage,
-            ConstantModelType::ExponentialMovingAverage => rust_ti::ConstantModelType::ExponentialMovingAverage,
+            ConstantModelType::SimpleMovingAverage => {
+                rust_ti::ConstantModelType::SimpleMovingAverage
+            }
+            ConstantModelType::SmoothedMovingAverage => {
+                rust_ti::ConstantModelType::SmoothedMovingAverage
+            }
+            ConstantModelType::ExponentialMovingAverage => {
+                rust_ti::ConstantModelType::ExponentialMovingAverage
+            }
             ConstantModelType::SimpleMovingMedian => rust_ti::ConstantModelType::SimpleMovingMedian,
             ConstantModelType::SimpleMovingMode => rust_ti::ConstantModelType::SimpleMovingMode,
         }
@@ -38,7 +44,9 @@ impl From<DeviationModel> for rust_ti::DeviationModel {
         match v {
             DeviationModel::StandardDeviation => rust_ti::DeviationModel::StandardDeviation,
             DeviationModel::MeanAbsoluteDeviation => rust_ti::DeviationModel::MeanAbsoluteDeviation,
-            DeviationModel::MedianAbsoluteDeviation => rust_ti::DeviationModel::MedianAbsoluteDeviation,
+            DeviationModel::MedianAbsoluteDeviation => {
+                rust_ti::DeviationModel::MedianAbsoluteDeviation
+            }
             DeviationModel::ModeAbsoluteDeviation => rust_ti::DeviationModel::ModeAbsoluteDeviation,
             DeviationModel::UlcerIndex => rust_ti::DeviationModel::UlcerIndex,
         }
@@ -85,9 +93,9 @@ pub mod candle_indicators;
 pub mod chart_trends;
 pub mod correlation_indicators;
 pub mod momentum_indicators;
+pub mod moving_average;
 pub mod other_indicators;
 pub mod standard_indicators;
 pub mod strength_indicators;
 pub mod trend_indicators;
 pub mod volatility_indicators;
-pub mod moving_average;

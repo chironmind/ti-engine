@@ -79,14 +79,14 @@ describe("chartTrends (parity with Rust tests)", () => {
     const out = chartTrends.breakDownTrends(
       prices,
       1,    // max_outliers
-      0.75, // soft r2 min
-      1.0,  // soft r2 max
-      0.5,  // hard r2 min
-      1.5,  // hard r2 max
-      2.0,  // soft SE mult
-      3.0,  // hard SE mult
-      2.0,  // soft chi2 mult
-      3.0   // hard chi2 mult
+      0.75, // soft_adj_r_squared_minimum
+      0.5,  // hard_adj_r_squared_minimum
+      2.0,  // soft_rmse_multiplier
+      3.0,  // hard_rmse_multiplier
+      1.0,  // soft_durbin_watson_min
+      3.0,  // soft_durbin_watson_max
+      0.7,  // hard_durbin_watson_min
+      3.3   // hard_durbin_watson_max
     );
     assert.deepEqual(out, [
       [0, 2, 0.16499999999999915, 100.23166666666665],

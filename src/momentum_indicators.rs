@@ -1,5 +1,5 @@
-use wasm_bindgen::prelude::*;
 use js_sys::Array;
+use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsValue;
 
 // -------- SINGLE --------
@@ -132,13 +132,12 @@ pub fn momentum_single_mcginley_dynamic_macd_line(
     previous_short_mcginley: f64,
     previous_long_mcginley: f64,
 ) -> Array {
-    let (macd, short_m, long_m) =
-        rust_ti::momentum_indicators::single::mcginley_dynamic_macd_line(
-            &prices,
-            short_period,
-            previous_short_mcginley,
-            previous_long_mcginley,
-        );
+    let (macd, short_m, long_m) = rust_ti::momentum_indicators::single::mcginley_dynamic_macd_line(
+        &prices,
+        short_period,
+        previous_short_mcginley,
+        previous_long_mcginley,
+    );
     let arr = Array::new();
     arr.push(&JsValue::from_f64(macd));
     arr.push(&JsValue::from_f64(short_m));
@@ -263,8 +262,7 @@ pub fn momentum_bulk_williams_percent_r(
     close: Vec<f64>,
     period: usize,
 ) -> Array {
-    let data =
-        rust_ti::momentum_indicators::bulk::williams_percent_r(&high, &low, &close, period);
+    let data = rust_ti::momentum_indicators::bulk::williams_percent_r(&high, &low, &close, period);
     let out = Array::new();
     for v in data {
         out.push(&JsValue::from_f64(v));
@@ -298,8 +296,11 @@ pub fn momentum_bulk_on_balance_volume(
     volume: Vec<f64>,
     previous_on_balance_volume: f64,
 ) -> Array {
-    let data =
-        rust_ti::momentum_indicators::bulk::on_balance_volume(&prices, &volume, previous_on_balance_volume);
+    let data = rust_ti::momentum_indicators::bulk::on_balance_volume(
+        &prices,
+        &volume,
+        previous_on_balance_volume,
+    );
     let out = Array::new();
     for v in data {
         out.push(&JsValue::from_f64(v));
