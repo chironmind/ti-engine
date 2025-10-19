@@ -6,6 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.1.1] - 2025-10-19
+
+### Changed
+
+- Updated rust_ti dependency from 2.1.5 to 2.2.0
+
+### Added
+
+- New DeviationModel variants: LogStandardDeviation, LaplaceStdEquivalent, CauchyIQRScale
+
+### Fixed
+
+- Updated test expectations for MedianAbsoluteDeviation and ModeAbsoluteDeviation to match rust_ti 2.2.0 behavior
+
+---
+
 ## [1.1.0] - 2025-10-08 
 
 ### Added

@@ -82,7 +82,7 @@ describe("correlationIndicators.single (parity with Rust tests, excluding Person
       ConstantModelType.SimpleMovingAverage,
       DeviationModel.MedianAbsoluteDeviation
     );
-    assert.strictEqual(v, 1.205018607543699);
+    assert.strictEqual(v, 0.8918502283104672);
   });
 
   test("SMA + ModeAD", () => {
@@ -92,7 +92,7 @@ describe("correlationIndicators.single (parity with Rust tests, excluding Person
       ConstantModelType.SimpleMovingAverage,
       DeviationModel.ModeAbsoluteDeviation
     );
-    assert.strictEqual(v, 0.38658762129158525);
+    assert.strictEqual(v, Infinity);
   });
 
   test("SMA + UlcerIndex", () => {

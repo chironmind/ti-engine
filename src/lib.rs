@@ -37,6 +37,9 @@ pub enum DeviationModel {
     MedianAbsoluteDeviation,
     ModeAbsoluteDeviation,
     UlcerIndex,
+    LogStandardDeviation,
+    LaplaceStdEquivalent,
+    CauchyIQRScale,
 }
 
 impl From<DeviationModel> for rust_ti::DeviationModel {
@@ -49,6 +52,9 @@ impl From<DeviationModel> for rust_ti::DeviationModel {
             }
             DeviationModel::ModeAbsoluteDeviation => rust_ti::DeviationModel::ModeAbsoluteDeviation,
             DeviationModel::UlcerIndex => rust_ti::DeviationModel::UlcerIndex,
+            DeviationModel::LogStandardDeviation => rust_ti::DeviationModel::LogStandardDeviation,
+            DeviationModel::LaplaceStdEquivalent => rust_ti::DeviationModel::LaplaceStdEquivalent,
+            DeviationModel::CauchyIQRScale => rust_ti::DeviationModel::CauchyIQRScale,
         }
     }
 }
