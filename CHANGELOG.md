@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [1.1.2] - 2025-10-19
 
 ### Fixed
-- Mangled release because some file were not updated correctly
+- Mangled release because some files were not updated correctly
 
 ---
 
