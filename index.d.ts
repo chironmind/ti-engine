@@ -18,6 +18,9 @@ export { ConstantModelType } from "./dist/bundler/ti_engine";
  * - MedianAbsoluteDeviation
  * - ModeAbsoluteDeviation
  * - UlcerIndex
+ * - LogStandardDeviation
+ * - LaplaceStdEquivalent
+ * - CauchyIQRScale
  */
 export { DeviationModel } from "./dist/bundler/ti_engine";
 
