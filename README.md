@@ -79,17 +79,22 @@ Browser (CDN - jsdelivr/unpkg)
 
 ```html
 <script type="module">
-  import init, * as ti from 'https://cdn.jsdelivr.net/npm/ti-engine@latest/dist/web/ti_engine.js';
+  // Note: Replace @latest with a specific version (e.g., @1.1.2) for production use
+  import init, * as wasm from 'https://cdn.jsdelivr.net/npm/ti-engine@latest/dist/web/ti_engine.js';
   
   await init(); // Initialize WASM module
   
+  // When using the web target directly, use the flat WASM exports
   const prices = [100.2, 100.46, 100.53, 100.38, 100.19];
-  const rsi = ti.momentum_single_relativeStrengthIndex(
+  const rsi = wasm.momentum_single_relativeStrengthIndex(
     prices,
-    ti.ConstantModelType.SimpleMovingAverage
+    wasm.ConstantModelType.SimpleMovingAverage
   );
   
   console.log("RSI:", rsi); // 49.2537313432832
+  
+  // Or use the index.web.js wrapper for the same namespaced API as bundlers
+  // import init, { momentumIndicators, ConstantModelType } from 'https://cdn.jsdelivr.net/npm/ti-engine@1.1.2/index.web.js';
 </script>
 ```
 
