@@ -1,0 +1,24 @@
+# .npmignore - controls what gets published to npm
+# Note: dist/ should be INCLUDED in npm package (built artifacts needed for runtime)
+
+# Force include dist/ (overrides .gitignore)
+!dist/
+!dist/**
+
+# Rust build artifacts (not needed in npm package)
+/target
+Cargo.lock
+
+# Development files
+/test
+/docs
+/.github
+build-all.sh
+
+# Git files
+.git
+.gitignore
+
+# Node development files
+node_modules
+.npmrc
