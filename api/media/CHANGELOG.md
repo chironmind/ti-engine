@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.1.4] - 2025-10-23
+
+### Changed
+- Updated release number on some files that had been forgotten
+
+---
+
+## [1.1.3] - 2025-10-23
+
+### Fixed
+- Added WASM files to get the CDN to work
+- Made lib name follow coding standards for JS packages
+
+---
+
 ## [1.1.2] - 2025-10-19
 
 ### Fixed
