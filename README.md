@@ -75,6 +75,24 @@ const sma = movingAverage.single.movingAverage(
 console.log("SMA:", sma); // 100.352
 ```
 
+Browser (CDN - jsdelivr/unpkg)
+
+```html
+<script type="module">
+  import init, * as ti from 'https://cdn.jsdelivr.net/npm/ti-engine@latest/dist/web/ti_engine.js';
+  
+  await init(); // Initialize WASM module
+  
+  const prices = [100.2, 100.46, 100.53, 100.38, 100.19];
+  const rsi = ti.momentum_single_relativeStrengthIndex(
+    prices,
+    ti.ConstantModelType.SimpleMovingAverage
+  );
+  
+  console.log("RSI:", rsi); // 49.2537313432832
+</script>
+```
+
 ---
 
 ## 🧩 What You Get
