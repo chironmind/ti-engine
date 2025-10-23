@@ -16,9 +16,9 @@
     "README.md"
   ],
   "scripts": {
-    "build:web": "wasm-pack build --release --target web --out-dir dist/web",
-    "build:node": "wasm-pack build --release --target nodejs --out-dir dist/node",
-    "build:bundler": "wasm-pack build --release --target bundler --out-dir dist/bundler",
+    "build:web": "wasm-pack build --release --target web --out-dir dist/web && rm -f dist/web/.gitignore",
+    "build:node": "wasm-pack build --release --target nodejs --out-dir dist/node && rm -f dist/node/.gitignore",
+    "build:bundler": "wasm-pack build --release --target bundler --out-dir dist/bundler && rm -f dist/bundler/.gitignore",
     "build": "npm run build:web && npm run build:node && npm run build:bundler",
     "prepublishOnly": "npm run build",
     "test": "npm run build && node --test"
